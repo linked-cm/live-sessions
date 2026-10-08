@@ -4,20 +4,54 @@
   "description": "Transport-neutral, policy-supplied live session admission and lifecycle contracts for Linked applications",
   "linkedPackage": true,
   "type": "module",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
   "license": "ISC",
-  "repository": { "type": "git", "url": "git+https://github.com/linked-fw/live-sessions.git" },
-  "files": ["dist", "README.md", "LICENSE"],
-  "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
-    "./package": { "types": "./dist/package.d.ts", "import": "./dist/package.js" }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linked-cm/live-sessions.git"
+  },
+  "homepage": "https://github.com/linked-cm/live-sessions#readme",
+  "bugs": {
+    "url": "https://github.com/linked-cm/live-sessions/issues"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "./src/package.ts",
+    "lib/esm/package.js",
+    "lib/cjs/package.js"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "prepare": "npm run build",
+    "build": "npm exec linked build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "npm run build && node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs"
   },
-  "dependencies": { "@_linked/core": "^2.22.2" },
-  "devDependencies": { "typescript": "5.9.2" },
-  "publishConfig": { "access": "public" }
+  "exports": {
+    ".": {
+      "types": "./lib/esm/index.d.ts",
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js"
+    },
+    "./package": {
+      "types": "./lib/esm/package.d.ts",
+      "import": "./lib/esm/package.js",
+      "require": "./lib/cjs/package.js"
+    }
+  },
+  "dependencies": {
+    "@_linked/core": "^2.25.0"
+  },
+  "devDependencies": {
+    "@_linked/cli": "1.39.0",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.9.2"
+  }
 }

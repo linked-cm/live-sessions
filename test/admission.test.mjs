@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { AdmissionError, issueCredential } from '../dist/index.js';
+import { AdmissionError, issueCredential } from '../lib/esm/index.js';
 
 const decision = { principalIri: 'https://example.org/people/a', audienceIri: 'https://example.org/rooms/1', audienceGeneration: 'g2', mediaRoom: 'room-g2', participantIdentity: 'p-a', mediaProfile: 'call', allowedPublishSources: ['microphone'], canSubscribe: true, expiresAtMs: 100_000, policyVersion: 'v3' };
 const minter = { capabilities: { 'room-isolation': true, 'coarse-subscribe-deny': true, 'per-listener-track-acl': false }, mint: async (d) => ({ token: 'signed', serverUrl: 'wss://example.org', room: d.mediaRoom, participantIdentity: d.participantIdentity, expiresAtMs: d.expiresAtMs }) };

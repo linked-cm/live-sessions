@@ -6,4 +6,4 @@ The server calls `issueCredential` with an application-owned `AdmissionAuthority
 
 `requiredEnforcement` is fail-closed. An adapter that cannot enforce per-listener track ACLs must report `false`; client subscription selection is a bandwidth hint only. Revocation results distinguish media-service acknowledgement from prevention of token reuse.
 
-Run `npm ci && npm test && npm run typecheck`.
+Run `npm ci && npm run build && npm test && npm run typecheck`.
