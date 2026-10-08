@@ -6,7 +6,7 @@ src/**/*.d.ts
 # Package build output and local dependencies.
 lib/
 node_modules/
-
-.DS_Store
-
+yarn.lock
+*.log
 *.tgz
+.DS_Store
