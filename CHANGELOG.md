@@ -1,5 +1,11 @@
 # @linked.cm/live-sessions
 
+## 0.1.1
+
+### Patch Changes
+
+- [#5](https://github.com/linked-cm/live-sessions/pull/5) [`fc865fe`](https://github.com/linked-cm/live-sessions/commit/fc865fe78124d316050790f5f16577926fd85735) Thanks [@flyon](https://github.com/flyon)! - Importing any entry point now registers the package with `@_linked/core`. Before, it was registered only when a consumer imported `@linked.cm/live-sessions/package` itself.
+
 ## 0.1.0
 
 ### Minor Changes
