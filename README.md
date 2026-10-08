@@ -1,4 +1,4 @@
-# @_linked/live-sessions
+# @linked.cm/live-sessions
 
 Transport-neutral live media admission and lifecycle contracts for Linked applications. Applications own identity, Linked/SHACL policy, audience partitioning, seat leases, and any Matrix conversation binding. This package has no media server or chat history.
 
