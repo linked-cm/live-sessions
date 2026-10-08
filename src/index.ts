@@ -1,3 +1,5 @@
+// Registers the package with @_linked/core whichever entry a consumer imports.
+import './package.js';
 /** The application owns identity, policy, audience partitioning, and seat leases. */
 export type MediaSource = 'microphone' | 'camera' | 'screen_share' | 'screen_share_audio';
 export type MediaProfile = 'audio' | 'call' | 'world' | 'presentation';
