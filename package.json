@@ -1,6 +1,6 @@
 {
   "name": "@linked.cm/live-sessions",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Transport-neutral, policy-supplied live session admission and lifecycle contracts for Linked applications",
   "linkedPackage": true,
   "type": "module",
